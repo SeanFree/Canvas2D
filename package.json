@@ -1,0 +1,33 @@
+{
+  "name": "canvas2d",
+  "version": "0.0.1",
+  "description": "A JS library for creating 2D canvas animations",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx karma start",
+    "build": "npx webpack"
+  },
+  "author": "Sean Free",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.2",
+    "jasmine": "^3.1.0",
+    "karma": "^2.0.5",
+    "karma-babel-preprocessor": "^7.0.0",
+    "karma-chai": "^0.1.0",
+    "karma-cli": "^1.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-webpack": "^3.0.0",
+    "mocha": "^5.2.0",
+    "phantomjs": "^2.1.7",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "karma-mocha-reporter": "^2.2.5"
+  }
+}
