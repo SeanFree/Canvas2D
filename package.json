@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx karma start",
-    "build": "npx webpack"
+    "doc": "jsdoc -c ./jsdoc.conf.js",
+    "build": "npx webpack && jsdoc -c ./jsdoc.conf.js"
   },
   "author": "Sean Free",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "chai": "^4.1.2",
     "chai-spies": "^1.0.0",
     "jasmine": "^3.1.0",
+    "jsdoc": "^3.5.5",
     "karma": "^2.0.5",
     "karma-babel-preprocessor": "^7.0.0",
     "karma-chai": "^0.1.0",
