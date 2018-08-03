@@ -1,4 +1,4 @@
-export const { sqrt, pow, cos, sin, atan, atan2, PI, random } = Math;
+export const { sqrt, pow, cos, sin, acos, atan, atan2, PI, random } = Math;
 export const rand = n => n * random();
 export const randRange = n => n - rand(2 * n);
 export const fadeIn = (t, m) => t / m;
@@ -11,16 +11,18 @@ export const TAU = 2 * PI;
 export const TO_DEG = 180 / PI;
 export const TO_RAD = PI / 180;
 export const G = 6.67 * pow(10, -11);
+export const EPSILON = 2.220446049250313e-16;
 export default {
-  sqrt, 
-  pow, 
-  cos, 
-  sin, 
-  atan, 
-  atan2, 
-  PI, 
+  sqrt,
+  pow,
+  cos,
+  sin,
+  acos,
+  atan,
+  atan2,
+  PI,
   random,
-  rand, 
+  rand,
   randRange,
   fadeIn,
   fadeOut,
@@ -31,5 +33,6 @@ export default {
   TAU,
   TO_DEG,
   TO_RAD,
-  G
+  G,
+  EPSILON
 }
