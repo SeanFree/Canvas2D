@@ -23,6 +23,7 @@ class Vec2D {
 	 * Create a new Vec2D
 	 * @param {Number} x - x-axis value
 	 * @param {Number} y - y-axis value
+	 * @throws {TypeError} if x or y value is non-numeric
 	*/
 	constructor(x = 0, y = 0) {
 		if ("number" !== typeof x) {
@@ -56,6 +57,7 @@ class Vec2D {
 	/**
 	 * Set the x-axis value
 	 * @param {Number} x - x-axis value
+	 * @throws {TypeError} if x value is non-numeric
 	 * @example
 	 * vec.x = 5;
 	 */
@@ -75,6 +77,7 @@ class Vec2D {
 	/**
 	 * Set the y-axis value
 	 * @param {Number} y - y-axis value
+	 * @throws {TypeError} if y value is non-numeric
 	 * @example
 	 * vec.y = 5;
 	 */
@@ -135,8 +138,9 @@ class Vec2D {
 	}
 	/**
 	 * Add the supplied components (x, y values)
-	 * @param {Array} components[x,y]
+	 * @param {Array} components
 	 * @returns {Vec2D} current scope
+	 * @throws {TypeError} if x or y value is non-numeric
 	 * @example
 	 * vec.add([1,1])
 	 * vec1.add(vec2.components)
@@ -154,8 +158,9 @@ class Vec2D {
 	}
 	/**
 	 * Add the x value from supplied components
-	 * @param {Array} components[x,y]
+	 * @param {Array} components
 	 * @returns {Vec2D} current scope
+	 * @throws {TypeError} if x value is non-numeric
 	 * @example
 	 * vec.addX([1,1])
 	 * vec1.addX(vec2.components)
@@ -169,8 +174,9 @@ class Vec2D {
 	}
 	/**
 	 * Add the y value from supplied components
-	 * @param {Array} components[x,y]
+	 * @param {Array} components
 	 * @returns {Vec2D} current scope
+	 * @throws {TypeError} if y value is non-numeric
 	 * @example
 	 * vec.addY([1,1])
 	 * vec1.addY(vec2.components)
@@ -184,8 +190,9 @@ class Vec2D {
 	}
 	/**
 	 * Subtract the supplied components (x, y values)
-	 * @param {Array} components[x,y]
+	 * @param {Array} components
 	 * @returns {Vec2D} current scope
+	 * @throws {TypeError} if x or y value is non-numeric
 	 * @example
 	 * vec.sub([1,1])
 	 * vec1.sub(vec2.components)
@@ -203,8 +210,9 @@ class Vec2D {
 	}
 	/**
 	 * Subtract the x value from supplied components
-	 * @param {Array} components[x,y]
+	 * @param {Array} components
 	 * @returns {Vec2D} current scope
+	 * @throws {TypeError} if x value is non-numeric
 	 * @example
 	 * vec.subX([1,1])
 	 * vec1.subX(vec2.components)
@@ -218,8 +226,9 @@ class Vec2D {
 	}
 	/**
 	 * Subtract the y value from supplied components
-	 * @param {Array} components[x,y]
+	 * @param {Array} components
 	 * @returns {Vec2D} current scope
+	 * @throws {TypeError} if y value is non-numeric
 	 * @example
 	 * vec.subY([1,1])
 	 * vec1.subY(vec2.components)
@@ -235,6 +244,7 @@ class Vec2D {
 	 * Scale (multiply) x and y by the supplied value
 	 * @param {Number} scalar
 	 * @returns {Vec2D} current scope
+	 * @throws {TypeError} if scalar value is non-numeric
 	 * @example
 	 * vec.scale(2)
 	 */
@@ -250,6 +260,7 @@ class Vec2D {
 	 * Scale (multiply) x by the supplied value
 	 * @param {Number} x
 	 * @returns {Vec2D} current scope
+	 * @throws {TypeError} if x scalar value is non-numeric
 	 * @example
 	 * vec.scale(2)
 	 */
@@ -264,6 +275,7 @@ class Vec2D {
 	 * Scale (multiply) y by the supplied value
 	 * @param {Number} y
 	 * @returns {Vec2D} current scope
+	 * @throws {TypeError} if y scalar value is non-numeric
 	 * @example
 	 * vec.scale(2)
 	 */
@@ -278,6 +290,7 @@ class Vec2D {
 	 * Rotate by the supplied value (radians)
 	 * @param {Number} theta - rotation amount in radians
 	 * @returns {Vec2D} current scope
+	 * @throws {TypeError} if theta value is non-numeric
 	 * @example
 	 * vec.rotate(0.1)
 	 * vec.rotate(Math.PI)
@@ -296,6 +309,7 @@ class Vec2D {
 	 * Rotate by the supplied value (degrees)
 	 * @param {Number} theta - rotation amount in degrees
 	 * @returns {Vec2D} convert to radians -> call rotate -> current scope
+	 * @throws {TypeError} if theta value is non-numeric
 	 * @example
 	 * vec.rotate(20)
 	 * vec.rotate(180)
@@ -310,9 +324,10 @@ class Vec2D {
 	 * Linear Interpolate to supplied components value by the supplied amount
 	 * Used incrementally, the closer that amount is to 1,
 	 * the faster the interpolation will complete
-	 * @param {Array} components[x,y]
+	 * @param {Array} components
 	 * @param {Number} amount
 	 * @returns {Vec2D} current scope
+	 * @throws {TypeError} if x, y or amount value is non-numeric
 	 * @example
 	 * vec.lerp([2,2], 0.005)
 	 * vec1.lerp(vec2.components, 0.025)
