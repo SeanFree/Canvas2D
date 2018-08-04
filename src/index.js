@@ -14,11 +14,11 @@ Float32Array.prototype.lerp = function(target, amount) {
 	});
 };
 
-window.Constants = Constants;
-window.Config = Config;
-window.Vec2D = Vec2D;
-window.Vec2DArray = Vec2DArray;
-window.Vec2DArrayController = Vec2DArrayController;
+window["Constants"] = Constants;
+window["Config"] = Config;
+window["Vec2D"] = Vec2D;
+window["Vec2DArray"] = Vec2DArray;
+window["Vec2DArrayController"] = Vec2DArrayController;
 
 export default {
 	Constants,

@@ -39,6 +39,9 @@ class Vec2DArray {
 	 * @returns {Array<Number>}
 	 */
 	get(i) {
+		if ("number" !== typeof i) {
+			throw new TypeError("i value must be a number")
+		}
 		return [this.x[i], this.y[i]];
 	}
 	/**
@@ -47,6 +50,9 @@ class Vec2DArray {
 	 * @returns {Vec2D}
 	 */
 	getVec2D(i) {
+		if ("number" !== typeof i) {
+			throw new TypeError("i value must be a number")
+		}
 		return new Vec2D(this.x[i], this.y[i]);
 	}
 	/**
@@ -55,6 +61,9 @@ class Vec2DArray {
 	 * @returns {Number}
 	 */
 	getX(i) {
+		if ("number" !== typeof i) {
+			throw new TypeError("i value must be a number")
+		}
 		return this.x[i];
 	}
 	/**
@@ -63,6 +72,9 @@ class Vec2DArray {
 	 * @returns {Number}
 	 */
 	getY(i) {
+		if ("number" !== typeof i) {
+			throw new TypeError("i value must be a number")
+		}
 		return this.y[i];
 	}
 	/**
@@ -73,6 +85,15 @@ class Vec2DArray {
 	 * @returns {Vec2DArray} current scope
 	 */
 	set(i, x, y) {
+		if ("number" !== typeof i) {
+			throw new TypeError("i value must be a number")
+		}
+		if ("number" !== typeof x) {
+			throw new TypeError("x value must be a number")
+		}
+		if ("number" !== typeof y) {
+			throw new TypeError("y value must be a number")
+		}
 		this.x[i] = x;
 		this.y[i] = y;
 		return this;
@@ -84,6 +105,15 @@ class Vec2DArray {
 	 * @returns {Vec2DArray} current scope
 	 */
 	setFromComponents(i, [x, y]) {
+		if ("number" !== typeof i) {
+			throw new TypeError("i value must be a number")
+		}
+		if ("number" !== typeof x) {
+			throw new TypeError("x value must be a number")
+		}
+		if ("number" !== typeof y) {
+			throw new TypeError("y value must be a number")
+		}
 		this.x[i] = x;
 		this.y[i] = y;
 		return this;
@@ -91,12 +121,21 @@ class Vec2DArray {
 	/**
 	 * Set the x and y value from a Vec2D at the supplied index
 	 * @param {Number} i
-	 * @param {Array<Number>} components
+	 * @param {Vec2D} {Number,Number} x,y
 	 * @returns {Vec2DArray} current scope
 	 */
-	setFromVec2D(i, {components}) {
-		this.x[i] = components[0];
-		this.y[i] = components[1];
+	setFromVec2D(i, {x, y}) {
+		if ("number" !== typeof i) {
+			throw new TypeError("i value must be a number")
+		}
+		if ("number" !== typeof x) {
+			throw new TypeError("x value must be a number")
+		}
+		if ("number" !== typeof y) {
+			throw new TypeError("y value must be a number")
+		}
+		this.x[i] = x;
+		this.y[i] = y;
 		return this;
 	}
 	/**
@@ -106,6 +145,12 @@ class Vec2DArray {
 	 * @returns {Vec2DArray} current scope
 	 */
 	setX(i, x) {
+		if ("number" !== typeof i) {
+			throw new TypeError("i value must be a number")
+		}
+		if ("number" !== typeof x) {
+			throw new TypeError("x value must be a number")
+		}
 		this.x[i] = x;
 		return this;
 	}
@@ -116,6 +161,12 @@ class Vec2DArray {
 	 * @returns {Vec2DArray} current scope
 	 */
 	setY(i, y) {
+		if ("number" !== typeof i) {
+			throw new TypeError("i value must be a number")
+		}
+		if ("number" !== typeof y) {
+			throw new TypeError("y value must be a number")
+		}
 		this.y[i] = y;
 		return this;
 	}

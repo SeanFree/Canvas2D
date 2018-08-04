@@ -135,13 +135,7 @@ allowing for chaining of methods.</p></div>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>let vec3 =
-  vec1
-    .add(vec2.components)
-    .rotate(Math.PI)
-    .scale(2)
-    .clone()
-    .norm;</code></pre>
+    <pre class="prettyprint"><code>let vec3 =  vec1    .add(vec2.components)    .rotate(Math.PI)    .scale(2)    .clone()    .norm;</code></pre>
 
 
 
@@ -1243,8 +1237,7 @@ allowing for chaining of methods.</p></div>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.add([1,1])
-vec1.add(vec2.components)</code></pre>
+    <pre class="prettyprint"><code>vec.add([1,1])vec1.add(vec2.components)</code></pre>
 
 
 
@@ -1435,8 +1428,7 @@ vec1.add(vec2.components)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.addX([1,1])
-vec1.addX(vec2.components)</code></pre>
+    <pre class="prettyprint"><code>vec.addX([1,1])vec1.addX(vec2.components)</code></pre>
 
 
 
@@ -1627,8 +1619,7 @@ vec1.addX(vec2.components)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.addY([1,1])
-vec1.addY(vec2.components)</code></pre>
+    <pre class="prettyprint"><code>vec.addY([1,1])vec1.addY(vec2.components)</code></pre>
 
 
 
@@ -1793,8 +1784,7 @@ vec1.addY(vec2.components)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec1.angleBetween(vec2)
-vec1.angleBetween({components:[0,1], magnitude: 1}) // !Not recommended</code></pre>
+    <pre class="prettyprint"><code>vec1.angleBetween(vec2)vec1.angleBetween({components:[0,1], magnitude: 1}) // !Not recommended</code></pre>
 
 
 
@@ -1959,8 +1949,7 @@ vec1.angleBetween({components:[0,1], magnitude: 1}) // !Not recommended</code></
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec1.angleBetweenDeg(vec2)
-vec1.angleBetweenDeg({components:[0,1], magnitude: 1}) // !Not recommended</code></pre>
+    <pre class="prettyprint"><code>vec1.angleBetweenDeg(vec2)vec1.angleBetweenDeg({components:[0,1], magnitude: 1}) // !Not recommended</code></pre>
 
 
 
@@ -2229,8 +2218,7 @@ vec1.angleBetweenDeg({components:[0,1], magnitude: 1}) // !Not recommended</code
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec1.dot(vec2)
-vec1.dot({components: [1,1]})</code></pre>
+    <pre class="prettyprint"><code>vec1.dot(vec2)vec1.dot({components: [1,1]})</code></pre>
 
 
 
@@ -2446,8 +2434,7 @@ the faster the interpolation will complete</p>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.lerp([2,2], 0.005)
-vec1.lerp(vec2.components, 0.025)</code></pre>
+    <pre class="prettyprint"><code>vec.lerp([2,2], 0.005)vec1.lerp(vec2.components, 0.025)</code></pre>
 
 
 
@@ -2754,8 +2741,7 @@ vec1.lerp(vec2.components, 0.025)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.rotate(0.1)
-vec.rotate(Math.PI)</code></pre>
+    <pre class="prettyprint"><code>vec.rotate(0.1)vec.rotate(Math.PI)</code></pre>
 
 
 
@@ -2954,8 +2940,7 @@ vec.rotate(Math.PI)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.rotate(20)
-vec.rotate(180)</code></pre>
+    <pre class="prettyprint"><code>vec.rotate(20)vec.rotate(180)</code></pre>
 
 
 
@@ -3743,8 +3728,7 @@ vec.rotate(180)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.sub([1,1])
-vec1.sub(vec2.components)</code></pre>
+    <pre class="prettyprint"><code>vec.sub([1,1])vec1.sub(vec2.components)</code></pre>
 
 
 
@@ -3935,8 +3919,7 @@ vec1.sub(vec2.components)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.subX([1,1])
-vec1.subX(vec2.components)</code></pre>
+    <pre class="prettyprint"><code>vec.subX([1,1])vec1.subX(vec2.components)</code></pre>
 
 
 
@@ -4127,8 +4110,7 @@ vec1.subX(vec2.components)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.subY([1,1])
-vec1.subY(vec2.components)</code></pre>
+    <pre class="prettyprint"><code>vec.subY([1,1])vec1.subY(vec2.components)</code></pre>
 
 
 
@@ -5458,8 +5440,7 @@ vec1.subY(vec2.components)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.add([1,1])
-vec1.add(vec2.components)</code></pre>
+    <pre class="prettyprint"><code>vec.add([1,1])vec1.add(vec2.components)</code></pre>
 
 
 
@@ -5650,8 +5631,7 @@ vec1.add(vec2.components)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.addX([1,1])
-vec1.addX(vec2.components)</code></pre>
+    <pre class="prettyprint"><code>vec.addX([1,1])vec1.addX(vec2.components)</code></pre>
 
 
 
@@ -5842,8 +5822,7 @@ vec1.addX(vec2.components)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.addY([1,1])
-vec1.addY(vec2.components)</code></pre>
+    <pre class="prettyprint"><code>vec.addY([1,1])vec1.addY(vec2.components)</code></pre>
 
 
 
@@ -6008,8 +5987,7 @@ vec1.addY(vec2.components)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec1.angleBetween(vec2)
-vec1.angleBetween({components:[0,1], magnitude: 1}) // !Not recommended</code></pre>
+    <pre class="prettyprint"><code>vec1.angleBetween(vec2)vec1.angleBetween({components:[0,1], magnitude: 1}) // !Not recommended</code></pre>
 
 
 
@@ -6174,8 +6152,7 @@ vec1.angleBetween({components:[0,1], magnitude: 1}) // !Not recommended</code></
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec1.angleBetweenDeg(vec2)
-vec1.angleBetweenDeg({components:[0,1], magnitude: 1}) // !Not recommended</code></pre>
+    <pre class="prettyprint"><code>vec1.angleBetweenDeg(vec2)vec1.angleBetweenDeg({components:[0,1], magnitude: 1}) // !Not recommended</code></pre>
 
 
 
@@ -6444,8 +6421,7 @@ vec1.angleBetweenDeg({components:[0,1], magnitude: 1}) // !Not recommended</code
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec1.dot(vec2)
-vec1.dot({components: [1,1]})</code></pre>
+    <pre class="prettyprint"><code>vec1.dot(vec2)vec1.dot({components: [1,1]})</code></pre>
 
 
 
@@ -6661,8 +6637,7 @@ the faster the interpolation will complete</p>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.lerp([2,2], 0.005)
-vec1.lerp(vec2.components, 0.025)</code></pre>
+    <pre class="prettyprint"><code>vec.lerp([2,2], 0.005)vec1.lerp(vec2.components, 0.025)</code></pre>
 
 
 
@@ -6969,8 +6944,7 @@ vec1.lerp(vec2.components, 0.025)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.rotate(0.1)
-vec.rotate(Math.PI)</code></pre>
+    <pre class="prettyprint"><code>vec.rotate(0.1)vec.rotate(Math.PI)</code></pre>
 
 
 
@@ -7169,8 +7143,7 @@ vec.rotate(Math.PI)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.rotate(20)
-vec.rotate(180)</code></pre>
+    <pre class="prettyprint"><code>vec.rotate(20)vec.rotate(180)</code></pre>
 
 
 
@@ -7958,8 +7931,7 @@ vec.rotate(180)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.sub([1,1])
-vec1.sub(vec2.components)</code></pre>
+    <pre class="prettyprint"><code>vec.sub([1,1])vec1.sub(vec2.components)</code></pre>
 
 
 
@@ -8150,8 +8122,7 @@ vec1.sub(vec2.components)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.subX([1,1])
-vec1.subX(vec2.components)</code></pre>
+    <pre class="prettyprint"><code>vec.subX([1,1])vec1.subX(vec2.components)</code></pre>
 
 
 
@@ -8342,8 +8313,7 @@ vec1.subX(vec2.components)</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>vec.subY([1,1])
-vec1.subY(vec2.components)</code></pre>
+    <pre class="prettyprint"><code>vec.subY([1,1])vec1.subY(vec2.components)</code></pre>
 
 
 
@@ -8369,7 +8339,7 @@ vec1.subY(vec2.components)</code></pre>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Aug 03 2018 16:18:42 GMT-0400 (EDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Aug 04 2018 16:37:39 GMT-0400 (Eastern Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
