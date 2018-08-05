@@ -47,6 +47,7 @@ class Vec2DArray {
 	/**
 	 * Get a Vec2D object at supplied index
 	 * @param {Number} i
+	 * @memberof {Vec2DArray}
 	 * @returns {Vec2D}
 	 */
 	getVec2D(i) {
@@ -122,6 +123,7 @@ class Vec2DArray {
 	 * Set the x and y value from a Vec2D at the supplied index
 	 * @param {Number} i
 	 * @param {Vec2D} {Number,Number} x,y
+	 * @memberof {Vec2DArray}
 	 * @returns {Vec2DArray} current scope
 	 */
 	setFromVec2D(i, {x, y}) {

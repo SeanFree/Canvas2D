@@ -1,6 +1,6 @@
 import RenderObject from './RenderObject';
 
-export default class Particle extends RenderObject {
+class Particle extends RenderObject {
 	constructor(x, y) {
 		super(x, y);
 		this.ttl = CONFIG.particles.maxTTL;
@@ -100,3 +100,5 @@ export default class Particle extends RenderObject {
 		return this;
 	}
 }
+
+export default Particle;

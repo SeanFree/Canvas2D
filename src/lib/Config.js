@@ -1,9 +1,9 @@
-export default class Config {
+class Config {
 	constructor(opts) {
 		this.apply(opts);
 	}
 	apply(opts) {
-		Object.assign(this, opts);
+		Object.defineProperties(this, Object.getOwnPropertyDescriptors(opts));
 	}
 	merge(opts) {
 		for (key of opts) this.set(key, opts[key]);
@@ -24,3 +24,5 @@ export default class Config {
 		else delete this[key];
 	}
 }
+
+export default Config;

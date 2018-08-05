@@ -1,6 +1,6 @@
 import Vec2D from './Vec2D';
 
-export default class Point2D {
+class Point2D {
 	constructor(x = 0, y = 0) {
 		this.components = new Float32Array(2);
 		this.components.set([x, y], 0);
@@ -81,3 +81,5 @@ export default class Point2D {
 		return new Point2D(this.x, this.y);
 	}
 }
+
+export default Point2D;

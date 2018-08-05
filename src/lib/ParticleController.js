@@ -1,11 +1,18 @@
 import Vec2DArray from './Vec2DArray';
+import Point2DArray from './Point2DArray';
 
-export default class Vec2DArrayController {
+/**
+ * @class ParticleController
+ * @author Sean Free
+ * @version 0.0.1
+ * @classdesc
+ */
+class ParticleController {
 	constructor(count, max) {
 		this.count = count;
 		this.max = max;
 		this.life = new Vec2DArray(this.count, this.max);
-		this.vertices = new Vec2DArray(this.count, this.max);
+		this.vertices = new Point2DArray(this.count, this.max);
 		this.velocities = new Vec2DArray(this.count, this.max);
 	}
 	getLife(i) {
@@ -37,3 +44,5 @@ export default class Vec2DArrayController {
 		return this;
 	}
 }
+
+export default Vec2DArrayController;

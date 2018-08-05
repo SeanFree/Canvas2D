@@ -3,7 +3,7 @@ const LINE_DEFAULTS = {
 	color: "rgba(255,255,255,1)"
 };
 
-export default class Line {
+class Line {
 	constructor(start, end, options) {
 		if (!(start instanceof Point2D)) {
 			throw new TypeError("'start' param must be a Point2D class");
@@ -44,3 +44,5 @@ export default class Line {
 		canvas2D.line(this.startX, this.startY, this.endX, this.endY);
 	}
 }
+
+export default Line;
