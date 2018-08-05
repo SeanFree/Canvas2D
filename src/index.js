@@ -1,4 +1,5 @@
 import Constants from './lib/Constants';
+import Util from './lib/Util';
 import Config from './lib/Config';
 import Vec2D from './lib/Vec2D';
 import Vec2DArray from './lib/Vec2DArray';
@@ -24,6 +25,7 @@ window["ParticleController"] = ParticleController;
 
 export default {
 	Constants,
+	Util,
 	Config,
 	Vec2D,
 	Vec2DArray,

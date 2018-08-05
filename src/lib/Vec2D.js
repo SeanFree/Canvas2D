@@ -1,4 +1,5 @@
-import { abs, sqrt, pow, cos, sin, acos, atan2, TO_DEG, TO_RAD, EPSILON } from './Constants';
+import  { abs, sqrt, pow, cos, sin, atan2 } from './Util';
+import { TO_DEG, TO_RAD, EPSILON } from './Constants';
 
 /**
  * @class Vec2D

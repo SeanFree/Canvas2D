@@ -112,7 +112,7 @@ describe("the Point2DArray class", () => {
             y = 5;
             point = new Point2D(x,y); 
         });
-        it("should set the x, y values from supplied pointtor's components at the supplied index", () => {
+        it("should set the x, y values from supplied point's components at the supplied index", () => {
             p2r.setFromPoint2D(0, point);
             expect(p2r.get(0)).to.eql([x,y]);
         });

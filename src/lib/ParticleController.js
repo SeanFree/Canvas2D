@@ -45,4 +45,4 @@ class ParticleController {
 	}
 }
 
-export default Vec2DArrayController;
+export default ParticleController;
