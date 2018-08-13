@@ -1,4 +1,4 @@
-import RenderObject from './RenderObject';
+import RenderObject from '../RenderObject';
 
 class Particle extends RenderObject {
 	constructor(x, y) {
@@ -18,7 +18,7 @@ class Particle extends RenderObject {
 			.setColor()
 			[CONFIG.noise.enabled ? "addNoise" : "scope"]()
 			.position.add(this.velocity);
-		
+
 		return this;
 	}
 	checkLife() {
@@ -26,13 +26,13 @@ class Particle extends RenderObject {
 		return this;
 	}
 	setNormalizedSpeed() {
-		this.normalizedSpeed =
-			(CONFIG.targetSpeed - 
-				sqrt(
-					pow(this.position.x - this.lastPosition.x, 2) +
-					pow(this.position.y - this.lastPosition.y, 2)
-				)) /
-			CONFIG.targetSpeed;
+		// this.normalizedSpeed =
+		// 	(CONFIG.targetSpeed -
+		// 		sqrt(
+		// 			pow(this.position.x - this.lastPosition.x, 2) +
+		// 			pow(this.position.y - this.lastPosition.y, 2)
+		// 		)) /
+		// 	CONFIG.targetSpeed;
 		return this;
 	}
 	setColor() {
@@ -49,18 +49,18 @@ class Particle extends RenderObject {
 					CONFIG.particles.baseHue +
 					this.normalizedSpeed * CONFIG.particles.hueRange;
 				break;
-			case "noise":
-				this.getHue = () =>
-					CONFIG.particles.baseHue +
-					(1 +
-						noise.simplex3(
-							this.position.x * CONFIG.noise.xOffActual,
-							this.position.y * CONFIG.noise.yOffActual,
-							tick * CONFIG.noise.zOffActual
-						)) *
-						0.5 *
-						CONFIG.particles.hueRange * -CONFIG.noise.banding;
-				break;
+			// case "noise":
+			// 	this.getHue = () =>
+			// 		CONFIG.particles.baseHue +
+			// 		(1 +
+			// 			noise.simplex3(
+			// 				this.position.x * CONFIG.noise.xOffActual,
+			// 				this.position.y * CONFIG.noise.yOffActual,
+			// 				tick * CONFIG.noise.zOffActual
+			// 			)) *
+			// 			0.5 *
+			// 			CONFIG.particles.hueRange * -CONFIG.noise.banding;
+			// 	break;
 			default:
 				this.getHue = () => CONFIG.particles.baseHue;
 				break;

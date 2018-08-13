@@ -20,7 +20,7 @@ class Config {
 		else this[key] = value;
 	}
 	delete(key) {
-		if (!key) return;
+		if (!key || !this.hasOwnProperty(key)) return;
 		else delete this[key];
 	}
 }

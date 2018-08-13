@@ -19,6 +19,14 @@ class RenderObject {
 	get vec2DVelocity() {
 		return this.velocity.clone();
 	}
+	set position(point2D) {
+		// TODO: error handling
+		this.position = point2D;
+	}
+	set velocity(vec2D) {
+		// TODO: error handling
+		this.velocity = vec2D;
+	}
 	setPosition(x, y) {
 		this.position.x = x;
 		this.position.y = y;

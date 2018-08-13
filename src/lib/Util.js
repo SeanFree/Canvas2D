@@ -7,7 +7,10 @@ export const rand = n => n * random();
 export const randRange = n => n - rand(2 * n);
 export const fadeIn = (t, m) => t / m;
 export const fadeOut = (t, m) => (m - t) / m;
-export const fadeInOut = (t, m) => abs((t + 0.5 * m) % m - 0.5 * m) / (0.5 * m);
+export const fadeInOut = (t, m) => {
+    let hm = 0.5 * m;
+    return abs((t + hm) % m - hm) / hm
+};
 export default {
     sqrt,
     pow,

@@ -27,26 +27,38 @@ class Canvas {
 		this.buffer.strokeStyle = c;
 	}
 	fillColor(c) {
-		this.buffer.sillStyle = c;
+		this.buffer.fillStyle = c;
 	}
-	line(x1, y1, x2, y2, w, c) {
+	line({x1, y1, x2, y2, width, color}) {
 		this.buffer.beginPath();
-		this.strokeColor(c);
-		this.buffer.lineWidth = w;
+		this.strokeColor(color);
+		this.buffer.lineWidth = width;
 		this.buffer.moveTo(x1, y1);
 		this.buffer.lineTo(x2, y2);
 		this.buffer.stroke();
 		this.buffer.closePath();
 	}
-	rect(x, y, w, h, c) {
-		this.fillColor(c);
-		this.buffer.fillRect(x, y, w, h);
+	rect({fill, stroke, x, y, width, height, color, strokeWidth}) {
+		if (fill) {
+			this.fillColor(color.fill);
+			this.buffer.fillRect(x, y, width, height);
+		}
+		if (stroke) {
+			this.strokeColor(color.stroke);
+			this.buffer.strokeRect(x, y, width, height);
+		}
 	}
-	arc(x, y, r, s, e, c) {
+	arc({fill, stroke, x, y, radius, start, end, color}) {
 		this.buffer.beginPath();
-		this.fillColor(c);
-		this.buffer.arc(x, y, r, s, e);
-		this.buffer.fill();
+		this.buffer.arc(x, y, radius, start, end);
+		if (fill) {
+			this.fillColor(color.fill);
+			this.buffer.fill();
+		}
+		if (stroke) {
+			this.strokeColor(color.stroke);
+			this.buffer.stroke();
+		}
 		this.buffer.closePath();
 	}
 	render() {

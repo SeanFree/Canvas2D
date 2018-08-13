@@ -5,6 +5,12 @@ import Vec2D from './lib/Vec2D';
 import Vec2DArray from './lib/Vec2DArray';
 import Point2DArray from './lib/Point2DArray';
 import ParticleController from './lib/ParticleController';
+import {
+    Circle,
+    Line,
+    Particle,
+    Rect
+} from './lib/shapes/';
 
 function lerp(n1, n2, speed) {
 	return (1 - speed) * n1 + speed * n2;
@@ -22,6 +28,10 @@ window["Vec2D"] = Vec2D;
 window["Vec2DArray"] = Vec2DArray;
 window["Point2DArray"] = Point2DArray;
 window["ParticleController"] = ParticleController;
+window["Circle"] = Circle;
+window["Line"] = Line;
+window["Particle"] = Particle;
+window["Rect"] = Rect;
 
 export default {
 	Constants,
